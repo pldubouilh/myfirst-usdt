@@ -1,9 +1,10 @@
 DTRACE=dtrace
 UNAME=$(shell uname)
 
+LDFLAGS=
 COPTS=-Wall -g -O2
 OBJS=test.o
-LIBS=
+LIBS=-lpthread
 DTOBJS=
 DTSRC=
 ifneq ($(UNAME),Darwin)
